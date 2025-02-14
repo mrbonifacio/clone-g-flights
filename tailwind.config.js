@@ -6,8 +6,8 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				"white-mode": "url('/bg-white.svg')",
-				"dark-mode": "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/bg-dark.svg')",
+				'white-mode': "url('/bg-white.svg')",
+				'dark-mode': "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/bg-dark.svg')"
 			},
 			fontFamily: {
 				sans: [
@@ -61,6 +61,28 @@ module.exports = {
 					'4': 'hsl(var(--chart-4))',
 					'5': 'hsl(var(--chart-5))'
 				}
+			},
+			keyframes: {
+				'accordion-down': {
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
+				},
+				'accordion-up': {
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
+				}
+			},
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
 		}
 	},
